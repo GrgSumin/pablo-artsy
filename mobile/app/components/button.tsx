@@ -4,7 +4,7 @@ import { Text, TouchableOpacity } from "react-native";
 interface ButtonProps {
   label: string;
   variant: "primary" | "transparent" | "white";
-  textColor: string;
+  textColor?: string;
   classname?: string;
 }
 
@@ -12,7 +12,7 @@ const Button = ({ label, variant, textColor, classname }: ButtonProps) => {
   return (
     <TouchableOpacity
       className={cn(
-        "flex items-center justify-center  rounded-md cursor-pointer transition-colors h-11 w-80",
+        "flex items-center justify-center  rounded-md cursor-pointer transition-colors h-11 w-full",
         variant === "primary" && "bg-[#212121] ",
         variant === "white" && "bg-white border-[1px] border-[#212121] ",
         variant === "transparent" &&
